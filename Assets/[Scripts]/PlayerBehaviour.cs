@@ -36,10 +36,20 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (x != 0.0f)
         {
+            Flip(x);
 
             rigidbody2D.AddForce(Vector2.right * horizontalForce * ((x > 0.0) ? 1.0f : -1.0f) * ((isGrounded) ? 1 : airFactor));
 
-            rigidbody2D.velocity = Vector2.ClampMagnitude(rigidbody2D.velocity, horizontalSpeed);
+            float clampedX = Mathf.Clamp(rigidbody2D.velocity.x, -horizontalSpeed, horizontalSpeed);
+            rigidbody2D.velocity = new Vector3(clampedX, rigidbody2D.velocity.y);
+        }
+    }
+
+    private void Flip(float x)
+    {
+        if (x != 0.0f)
+        {
+            transform.localScale = new Vector3((x > 0.0f) ? 1.0f : -1.0f, 1.0f);
         }
     }
 
