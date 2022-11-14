@@ -29,7 +29,10 @@ public class PlayerBehaviour : MonoBehaviour
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        leftJosystick = GameObject.Find("Left Joystick").GetComponent<Joystick>();
+        if (GameObject.Find("OnScreenControls"))
+        {
+            leftJosystick = GameObject.Find("Left Joystick").GetComponent<Joystick>();
+        }
     }
 
     void FixedUpdate()
@@ -44,7 +47,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void Move()
     {
-        float x = Input.GetAxisRaw("Horizontal") + leftJosystick.Horizontal;
+        float x = Input.GetAxisRaw("Horizontal") + (GameObject.Find("OnScreenControls") ? leftJosystick.Horizontal : 0.0f);
 
         if (x != 0.0f)
         {
@@ -80,7 +83,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void Jump()
     {
-        var y = Input.GetAxis("Jump") + leftJosystick.Vertical;
+        float y = Input.GetAxis("Jump") + (GameObject.Find("OnScreenControls") ? leftJosystick.Vertical : 0.0f);
 
         if (isGrounded && y > verticalThreshold)
         {
