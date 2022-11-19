@@ -167,7 +167,7 @@ MonoBehaviour:
   groundRadius: 0.5
   groundLayerMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 448
   isObstacleInFront: 0
   isGroundAhead: 0
   isGrounded: 0

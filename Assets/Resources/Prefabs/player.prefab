@@ -197,7 +197,7 @@ MonoBehaviour:
   groundRadius: 0.5
   groundLayerMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 448
   isGrounded: 0
   animator: {fileID: 0}
   animationState: 0
