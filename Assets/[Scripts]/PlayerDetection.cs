@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class PlayerDetection : MonoBehaviour
 {
+    [Header("Sensing Suite")]
     public LayerMask collisionLayerMask;
     public Collider2D colliderName;
     public ContactFilter2D contactFilter;
     public bool playerDetected;
     public bool LOS;
     public Transform playerTransform;
+    public float playerDirection;
+    public float enemyDirection;
+    
+    private Vector2 playerDirectionVector;
 
     private void Start()
     {
         playerTransform = FindObjectOfType<PlayerBehaviour>().transform;
         LOS = false;
         playerDetected = false;
+        playerDirectionVector = Vector2.zero;
     }
 
     private void Update()
@@ -26,7 +32,12 @@ public class PlayerDetection : MonoBehaviour
             var hits = Physics2D.Linecast(transform.position, playerTransform.position, collisionLayerMask);
             
             colliderName = hits.collider;
-            LOS = (hits.collider.gameObject.name == "Player");
+
+            playerDirectionVector = playerTransform.position - transform.position;
+            playerDirection = (playerDirectionVector.x > 0 ? 1.0f : -1.0f);
+            enemyDirection = GetComponentInParent<EnemyController>().direction.x;
+
+            LOS = ((hits.collider.gameObject.name == "Player") && (playerDirection == enemyDirection));
         }
     }
 
