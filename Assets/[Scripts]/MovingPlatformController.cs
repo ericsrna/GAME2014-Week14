@@ -45,24 +45,27 @@ public class MovingPlatformController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (timer <= 1.0f)
+        if (direction == PlatformDirection.CUSTOM)
         {
-            timer += customSpeedFactor;
-        }
-
-        if (timer >= 1.0f)
-        {
-            timer = 0.0f;
-
-            currentPointIndex++;
-            
-            if (currentPointIndex >= points.Count)
+            if (timer <= 1.0f)
             {
-                currentPointIndex = 0;
+                timer += customSpeedFactor;
             }
 
-            startPoint = transform.position;
-            destinationPoint = points[currentPointIndex];
+            if (timer >= 1.0f)
+            {
+                timer = 0.0f;
+
+                currentPointIndex++;
+
+                if (currentPointIndex >= points.Count)
+                {
+                    currentPointIndex = 0;
+                }
+
+                startPoint = transform.position;
+                destinationPoint = points[currentPointIndex];
+            }
         }
     }
 

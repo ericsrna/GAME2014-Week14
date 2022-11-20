@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6591035000870913649}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6591035001547157555}
   - component: {fileID: 6591035001547157564}
   - component: {fileID: 6591035001547157554}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ Transform:
   m_Children:
   - {fileID: 6591035000870913649}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6591035001547157566
 SpriteRenderer:
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   airFactor: 0.3
-  verticalForce: 15
+  verticalForce: 17
   horizontalForce: 50
   horizontalSpeed: 8
   groundPoint: {fileID: 6591035000870913649}
