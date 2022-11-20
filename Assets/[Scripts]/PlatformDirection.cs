@@ -7,5 +7,6 @@ public enum PlatformDirection
     HORIZONTAL,
     VERTICAL,
     DIAGNAL_UP,
-    DIAGONAL_DOWN
+    DIAGONAL_DOWN,
+    CUSTOM
 }

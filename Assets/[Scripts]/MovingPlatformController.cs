@@ -6,21 +6,64 @@ public class MovingPlatformController : MonoBehaviour
 {
     public PlatformDirection direction;
 
+    [Header("Movement Properties")]
     [Range(0f, 20f)] public float horizontalDistance = 8.0f;
     [Range(0f, 20f)] public float horizontalSpeed = 1.0f;
     [Range(0f, 20f)] public float verticalDistance = 0.0f;
     [Range(0f, 20f)] public float verticalSpeed = 1.0f;
+    [Range(0.001f, 0.1f)] public float customSpeedFactor = 0.02f;
+
+    [Header("Platform Path Points")]
+    public List<Vector2> points;
     
     private Vector2 startPoint;
+    private Vector2 destinationPoint;
+    private float timer;
+    private int currentPointIndex;
 
     void Start()
     {
+        timer = 0.0f;
+        currentPointIndex = 0;
         startPoint = transform.position;
+
+        // update all points by adding the starting point vector
+        for (int i = 0; i < points.Count; i++)
+        {
+            points[i] += startPoint;
+        }
+
+        points.Add(startPoint);
+
+        destinationPoint = points[currentPointIndex];
     }
 
     void Update()
     {
         Move();
+    }
+
+    private void FixedUpdate()
+    {
+        if (timer <= 1.0f)
+        {
+            timer += customSpeedFactor;
+        }
+
+        if (timer >= 1.0f)
+        {
+            timer = 0.0f;
+
+            currentPointIndex++;
+            
+            if (currentPointIndex >= points.Count)
+            {
+                currentPointIndex = 0;
+            }
+
+            startPoint = transform.position;
+            destinationPoint = points[currentPointIndex];
+        }
     }
 
     private void Move()
@@ -49,6 +92,9 @@ public class MovingPlatformController : MonoBehaviour
                     Mathf.PingPong(horizontalSpeed * Time.time, horizontalDistance) + startPoint.x,
                     startPoint.y - Mathf.PingPong(verticalSpeed * Time.time, verticalDistance),
                     0.0f);
+                break;
+            case PlatformDirection.CUSTOM:
+                transform.position = Vector2.Lerp(startPoint, destinationPoint, timer);
                 break;
         }
     }
