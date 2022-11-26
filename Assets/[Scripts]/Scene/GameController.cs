@@ -6,19 +6,13 @@ public class GameController : MonoBehaviour
 {
     public GameObject onScreenControls;
 
-    void Start()
+    void Awake()
     {
         onScreenControls = GameObject.Find("OnScreenControls");
 
         onScreenControls.SetActive(Application.platform != RuntimePlatform.WindowsPlayer && 
                                    Application.platform != RuntimePlatform.WindowsEditor);
-    }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            FindObjectOfType<HealthBarController>().TakeDamage(20);
-        }
+        FindObjectOfType<SoundManager>().PlayMusic(Sound.MAIN_MUSIC);
     }
 }
