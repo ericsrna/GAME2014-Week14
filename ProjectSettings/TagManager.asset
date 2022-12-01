@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Platform
+  - Hazard
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Platform
   - Marker
   - Enemy
-  - 
+  - Hazard
   - 
   - 
   - 
@@ -48,6 +49,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3431551677
+    locked: 0
+  - name: Props
+    uniqueID: 4141834271
     locked: 0
   - name: Player_FX
     uniqueID: 1777028411
