@@ -13,6 +13,6 @@ public class GameController : MonoBehaviour
         onScreenControls.SetActive(Application.platform != RuntimePlatform.WindowsPlayer && 
                                    Application.platform != RuntimePlatform.WindowsEditor);
 
-        FindObjectOfType<SoundManager>().PlayMusic(Sound.MAIN_MUSIC);
+        //FindObjectOfType<SoundManager>().PlayMusic(Sound.MAIN_MUSIC);
     }
 }
