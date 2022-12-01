@@ -16,8 +16,8 @@ TagManager:
   - Ground
   - Props
   - Platform
-  - 
-  - 
+  - Marker
+  - Enemy
   - 
   - 
   - 
@@ -52,8 +52,14 @@ TagManager:
   - name: Player_FX
     uniqueID: 1777028411
     locked: 0
+  - name: Enemy
+    uniqueID: 1130126399
+    locked: 0
   - name: Player
     uniqueID: 422909439
+    locked: 0
+  - name: Marker
+    uniqueID: 2041221881
     locked: 0
   - name: UI
     uniqueID: 2618475607
