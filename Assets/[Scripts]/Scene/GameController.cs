@@ -7,11 +7,6 @@ public class GameController : MonoBehaviour
     public GameObject onScreenControls;
     public GameObject miniMap;
 
-    private void Start()
-    {
-        
-    }
-
     void Awake()
     {
         miniMap = GameObject.Find("MiniMap");
@@ -21,6 +16,8 @@ public class GameController : MonoBehaviour
                                    Application.platform != RuntimePlatform.WindowsEditor);
 
         FindObjectOfType<SoundManager>().PlayMusic(Sound.MAIN_MUSIC);
+
+        BulletManager.Instance().BuildBulletPool();
     }
 
     private void Update()
