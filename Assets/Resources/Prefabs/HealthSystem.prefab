@@ -293,6 +293,7 @@ GameObject:
   - component: {fileID: 7961917202170384348}
   - component: {fileID: 96355329}
   - component: {fileID: 96355330}
+  - component: {fileID: 96355331}
   m_Layer: 3
   m_Name: HealthSystem
   m_TagString: Untagged
@@ -314,7 +315,7 @@ RectTransform:
   m_Children:
   - {fileID: 7961917200714609065}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -414,3 +415,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 0
   healthBar: {fileID: 0}
+--- !u!114 &96355331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7961917202170384349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1fe20aed847d334b920be533ddb4fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

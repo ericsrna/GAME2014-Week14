@@ -213,23 +213,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeValue: 0
---- !u!1 &96355324 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7961917202170384349, guid: 7850bb63b66ac0a42856c9463c6fc031, type: 3}
-  m_PrefabInstance: {fileID: 7961917202126228513}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &96355331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96355324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1fe20aed847d334b920be533ddb4fa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &143780853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -653,7 +636,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 3583
+    m_Bits: 7679
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1032,10 +1015,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2139450409}
     m_Modifications:
-    - target: {fileID: 2929252283123773937, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
-      propertyPath: m_Color.a
-      value: 0.5019608
-      objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1071,18 +1050,6 @@ PrefabInstance:
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_SizeDelta.y
       value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1135,18 +1102,6 @@ PrefabInstance:
     - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_Name
       value: Left Joystick
-      objectReference: {fileID: 0}
-    - target: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
-      propertyPath: axisOptions
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
-      propertyPath: handleRange
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2929252285020698103, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
-      propertyPath: m_Color.a
-      value: 0.5019608
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -5896,7 +5851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1603988348}
   - component: {fileID: 1603988349}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Camera Confiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6198,7 +6153,7 @@ GameObject:
   - component: {fileID: 1944617181}
   m_Layer: 6
   m_Name: Foreground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8515,10 +8470,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2000540413}
     m_Modifications:
-    - target: {fileID: 5893931558854037658, guid: 04b09d56b72cc8649b5cf59ab5333459, type: 3}
-      propertyPath: customSpeedFactor
-      value: 0.01
-      objectReference: {fileID: 0}
     - target: {fileID: 5893931558854037659, guid: 04b09d56b72cc8649b5cf59ab5333459, type: 3}
       propertyPath: m_Name
       value: MovingPlatform
@@ -8747,14 +8698,6 @@ PrefabInstance:
     - target: {fileID: 4811557532061590916, guid: 2adb18e54e69aa546a62802531cd8d84, type: 3}
       propertyPath: m_Name
       value: Big Block
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811557532061590919, guid: 2adb18e54e69aa546a62802531cd8d84, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811557532061590919, guid: 2adb18e54e69aa546a62802531cd8d84, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -153133025
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
