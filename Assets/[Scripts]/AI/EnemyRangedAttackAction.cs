@@ -40,5 +40,6 @@ public class EnemyRangedAttackAction : MonoBehaviour, Action
     {
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity, bulletParent);
         bullet.GetComponent<BulletController>().Activate();
+        soundManager.PlaySoundFX(Sound.BULLET, Channel.BULLET);
     }
 }

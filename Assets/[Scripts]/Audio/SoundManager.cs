@@ -18,9 +18,13 @@ public class SoundManager : MonoBehaviour
 
     private void InitializeSoundFX()
     {
+        // Pre-load sound_FX
         audioClips.Add(Resources.Load<AudioClip>("Audio/jump-sound"));
         audioClips.Add(Resources.Load<AudioClip>("Audio/hurt-sound"));
         audioClips.Add(Resources.Load<AudioClip>("Audio/lose-sound"));
+        audioClips.Add(Resources.Load<AudioClip>("Audio/bullet-sound"));
+
+        // Pre-load Music
         audioClips.Add(Resources.Load<AudioClip>("Audio/main-soundtrack"));
         audioClips.Add(Resources.Load<AudioClip>("Audio/end-soundtrack"));
     }
