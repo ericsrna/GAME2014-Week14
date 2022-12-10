@@ -9,7 +9,7 @@ TagManager:
   - Hazard
   - Bullet
   - Ground
-  - Props
+  - Prop
   layers:
   - Default
   - TransparentFX
