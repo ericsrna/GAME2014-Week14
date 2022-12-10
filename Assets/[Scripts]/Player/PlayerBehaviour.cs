@@ -219,5 +219,16 @@ public class PlayerBehaviour : MonoBehaviour
             }
             ShakeCamera();
         }
+
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            health.TakeDamage(10);
+
+            if (life.lifeValue > 0)
+            {
+                soundManager.PlaySoundFX(Sound.HURT, Channel.PLAYER_HURT_FX);
+            }
+            ShakeCamera();
+        }
     }
 }
